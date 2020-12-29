@@ -52,7 +52,7 @@ function App() {
         Reset
       </button>
       <div
-        className="text-white text-center hover:text-pink-500 cursor-pointer select-none	 absolute top-5 left-5"
+        className="text-white text-center  cursor-pointer select-none	 absolute top-5 left-5"
       >
         <div className="font-bold text-4xl">{coffeeAmount}g</div>
         <div className="text-opacity-40 font-light">COFFEE</div>
