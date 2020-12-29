@@ -55,7 +55,7 @@ function App() {
         className="text-white text-center  cursor-pointer select-none	 absolute top-5 left-5"
       >
         <div className="font-bold text-4xl">{coffeeAmount}g</div>
-        <div className="text-opacity-40 font-light">COFFEE</div>
+        <div className="text-opacity-40 font-light">-  COFFEE  +</div>
           <div  style={{
               position: 'absolute',
               top: '0',
@@ -63,7 +63,7 @@ function App() {
               height: '70px',
               left: '-50%',
           }} onClick={() => {
-              setCoffeeAmount(coffeeAmount - 5);
+              setCoffeeAmount(coffeeAmount - 1);
           }}></div>
           <div   style={{
               position: 'absolute',
@@ -75,6 +75,7 @@ function App() {
                  onClick={() => {
                      setCoffeeAmount(coffeeAmount + 5);
                  }}></div>
+
       </div>
 
       <div
@@ -82,7 +83,7 @@ function App() {
 
       >
         <div className="font-bold text-4xl">1:{ratioAmount}</div>
-        <div className="text-opacity-40 font-light">RATIO</div>
+        <div className="text-opacity-40 font-light">-  RATIO  +</div>
           <div  style={{
               position: 'absolute',
               top: '0',
