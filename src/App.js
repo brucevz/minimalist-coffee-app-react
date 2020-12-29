@@ -78,6 +78,7 @@ function App() {
           reset={reset}
           timerStatus={timerStatus}
           setTimerStatus={setTimerStatus}
+          pour1Amount={coffeeAmount}
           seconds={seconds}
         />
       )}
