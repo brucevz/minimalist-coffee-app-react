@@ -2,8 +2,9 @@ import * as Fathom from "fathom-client";
 import React, { useEffect, useState } from "react";
 import { Countdown } from "./Countdown";
 import { PourList } from "./PourList";
+
 function App() {
-  const DEFAULT_TIMER = 45;
+  const DEFAULT_TIMER = 5;
   const [seconds, setSeconds] = useState(DEFAULT_TIMER);
   const [timerStatus, setTimerStatus] = useState("PENDING");
 
@@ -13,6 +14,7 @@ function App() {
   function reset() {
     setTimerStatus("PENDING");
     setSeconds(DEFAULT_TIMER);
+    setRatioAmount(14);
   }
 
   useEffect(() => {
