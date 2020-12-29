@@ -8,13 +8,20 @@ function App() {
   const [seconds, setSeconds] = useState(DEFAULT_TIMER);
   const [timerStatus, setTimerStatus] = useState("PENDING");
 
-  const [coffeeAmount, setCoffeeAmount] = useState(20);
+  const [coffeeAmount, setCoffeeAmount] = useState(15);
   const [ratioAmount, setRatioAmount] = useState(14);
 
   function reset() {
     setTimerStatus("PENDING");
     setSeconds(DEFAULT_TIMER);
     setRatioAmount(14);
+    setCoffeeAmount(15);
+
+  }
+
+  function stopBloom() {
+      setTimerStatus("PENDING");
+      setSeconds(DEFAULT_TIMER);
   }
 
   useEffect(() => {
@@ -76,6 +83,7 @@ function App() {
       ) : (
         <Countdown
           reset={reset}
+          stopBloom={stopBloom}
           timerStatus={timerStatus}
           setTimerStatus={setTimerStatus}
           pour1Amount={coffeeAmount}
