@@ -4,7 +4,7 @@ import { Countdown } from "./Countdown";
 import { PourList } from "./PourList";
 
 function App() {
-  const DEFAULT_TIMER = 45;
+  const DEFAULT_TIMER = 5;
   const [seconds, setSeconds] = useState(DEFAULT_TIMER);
   const [timerStatus, setTimerStatus] = useState("PENDING");
 
@@ -68,8 +68,8 @@ function App() {
       </div>
 
       <div className="text-white  text-center absolute bottom-5 right-5">
-        <div className="font-bold text-4xl">{coffeeAmount * 2}g</div>
-        <div className="text-opacity-40 font-light">POUR</div>
+        <div className="font-bold text-4xl">{(coffeeAmount * ratioAmount)/ 5}g</div>
+        <div className="text-opacity-40 font-light">PER POUR</div>
       </div>
       {timerStatus === "DONE" ? (
         <PourList coffeeAmount={coffeeAmount} ratioAmount={ratioAmount} />
