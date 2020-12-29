@@ -4,7 +4,7 @@ import { Countdown } from "./Countdown";
 import { PourList } from "./PourList";
 
 function App() {
-  const DEFAULT_TIMER = 5;
+  const DEFAULT_TIMER = 45;
   const [seconds, setSeconds] = useState(DEFAULT_TIMER);
   const [timerStatus, setTimerStatus] = useState("PENDING");
 
