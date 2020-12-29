@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Countdown } from "./Countdown";
 import { PourList } from "./PourList";
 
+
 function App() {
   const DEFAULT_TIMER = 45;
   const [seconds, setSeconds] = useState(DEFAULT_TIMER);
@@ -43,6 +44,7 @@ function App() {
 
   return (
     <div className="bg-gray-900 absolute inset-0 flex justify-center items-center flex-col">
+
       <button
         className="absolute bottom-7 px-5 focus:outline-none bg-opacity-50 text-pink-600 p-2 bg-gray-800 "
         onClick={reset}
@@ -51,22 +53,57 @@ function App() {
       </button>
       <div
         className="text-white text-center hover:text-pink-500 cursor-pointer select-none	 absolute top-5 left-5"
-        onClick={() => {
-          setCoffeeAmount(coffeeAmount + 5);
-        }}
       >
         <div className="font-bold text-4xl">{coffeeAmount}g</div>
         <div className="text-opacity-40 font-light">COFFEE</div>
+          <div  style={{
+              position: 'absolute',
+              top: '0',
+              width: '100%',
+              height: '70px',
+              left: '-50%',
+          }} onClick={() => {
+              setCoffeeAmount(coffeeAmount - 5);
+          }}></div>
+          <div   style={{
+              position: 'absolute',
+              top: '0',
+              width: '100%',
+              height: '70px',
+              left: '50%',
+          }}
+                 onClick={() => {
+                     setCoffeeAmount(coffeeAmount + 5);
+                 }}></div>
       </div>
 
       <div
-        className="text-white  text-center hover:text-blue-400 cursor-pointer select-none absolute top-5 right-5"
-        onClick={() => {
-          setRatioAmount(ratioAmount + 1);
-        }}
+        className="text-white m-w-10 text-center  cursor-pointer select-none absolute top-5 right-5"
+
       >
         <div className="font-bold text-4xl">1:{ratioAmount}</div>
         <div className="text-opacity-40 font-light">RATIO</div>
+          <div  style={{
+              position: 'absolute',
+              top: '0',
+              width: '100%',
+              height: '70px',
+              left: '-50%',
+          }} onClick={() => {
+              setRatioAmount(ratioAmount - 1);
+          }}></div>
+          <div   style={{
+              position: 'absolute',
+              top: '0',
+              width: '100%',
+              height: '70px',
+              left: '50%',
+          }}
+               onClick={() => {
+              setRatioAmount(ratioAmount + 1);
+          }}></div>
+
+
       </div>
 
       <div className="text-white text-center absolute bottom-5 left-5">
