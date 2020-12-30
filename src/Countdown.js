@@ -7,7 +7,7 @@ export const Countdown = ({ seconds, timerStatus, stopBloom, setTimerStatus, pou
         onClick={stopBloom}
         className="bg-gray-900 hover:bg-gray-800 text-9xl focus:outline-none text-white rounded-full focus:border-0  h-72 w-72 font-bold "
       >
-        <span className=' absolute block pb-5 text-base   relative top-5 text-center text-white'>Pour {pour1Amount * 2}g Water... </span>
+        <span className=' absolute block pb-3 text-base   relative top-5 text-center text-white'>Pour {pour1Amount * 2}g Water... </span>
         {seconds}
       </button>
             </div>

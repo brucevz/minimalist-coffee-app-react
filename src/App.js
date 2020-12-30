@@ -46,7 +46,7 @@ function App() {
     <div className="bg-gray-900 absolute inset-0 flex justify-center items-center flex-col">
 
       <button
-        className="absolute bottom-7 px-5 focus:outline-none bg-opacity-50 text-pink-600 p-2 bg-gray-800 "
+        className="absolute bottom-7 px-5 focus:outline-none bg-opacity-50 text-pink-600 p-2  "
         onClick={reset}
       >
         Reset
@@ -55,7 +55,7 @@ function App() {
         className="text-white text-center  cursor-pointer select-none	 absolute top-5 left-5"
       >
         <div className="font-bold text-4xl">{coffeeAmount}g</div>
-        <div className="text-opacity-40 font-light">-  COFFEE  +</div>
+        <div className="opacity-50 font-light">-  COFFEE  +</div>
           <div  style={{
               position: 'absolute',
               top: '0',
@@ -83,7 +83,7 @@ function App() {
 
       >
         <div className="font-bold text-4xl">1:{ratioAmount}</div>
-        <div className="text-opacity-40 font-light">-  RATIO  +</div>
+        <div className="opacity-50 font-light">-  RATIO  +</div>
           <div  style={{
               position: 'absolute',
               top: '0',
@@ -109,12 +109,12 @@ function App() {
 
       <div className="text-white text-center absolute bottom-5 left-5">
         <div className="font-bold text-4xl">{coffeeAmount * ratioAmount}g</div>
-        <div className="text-opacity-40 font-light">WATER</div>
+        <div className="text-opacity-50 opacity-50 font-light">TOTAL WATER</div>
       </div>
 
       <div className="text-white  text-center absolute bottom-5 right-5">
         <div className="font-bold text-4xl">{(coffeeAmount * ratioAmount)/ 5}g</div>
-        <div className="text-opacity-40 font-light">PER POUR</div>
+        <div className="text-opacity-40 opacity-50 font-light">PER POUR</div>
       </div>
       {timerStatus === "DONE" ? (
         <PourList coffeeAmount={coffeeAmount} ratioAmount={ratioAmount} />
