@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export const PourList = ({ coffeeAmount, ratioAmount }) => {
   const steps = calculatePours(coffeeAmount, ratioAmount);
   return (
@@ -9,14 +11,19 @@ export const PourList = ({ coffeeAmount, ratioAmount }) => {
   );
 };
 
-const Pour = ({ step }) => (
-  <div className="mb-4 text-center">
-    <div className="text-sm text-center font-thin uppercase pt-3 text-white">
-      {step.label} Pour to
+const Pour = ({ step }) => {
+  const [done, setDone] = useState(step.label === "Bloom");;
+  return (
+    <div onClick={() => setDone(!done)} className={`mb-4 text-center ${done ? 'opacity-30' : ''}`}>
+      <div className="text-sm text-center font-thin uppercase pt-3 text-white">
+        {step.label} Pour to
+      </div>
+      <div className={`text-4xl text-center font-bold text-white ${done ? 'line-through' : ''}`}>
+        {step.amount}g
+      </div>
     </div>
-    <div className="text-4xl text-center font-bold text-white">{step.amount}g</div>
-  </div>
-);
+  );
+};
 
 const calculatePours = (coffeeAmount, ratioAmount) => {
   // subtract bloom from total
